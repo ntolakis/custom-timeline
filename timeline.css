@@ -1,0 +1,188 @@
+.timeline-carousel {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-carousel::before {
+    background-color: var(--color11);
+    content: '';
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: -1;
+}
+
+.timeline-carousel .timeline-post {
+    background: var(--white);
+    position: relative;
+    padding: 0px;
+    text-align: left;
+    min-height: 667px;
+}
+
+.timeline-carousel .timeline-post::before {
+    background-color: var(--color11);
+    content: '';
+    position: absolute;
+    top: 125px;
+    left: -10px;
+    right: -10px;
+    height: 2px;
+    z-index: 1;
+}
+
+.timeline-carousel .timeline-post.slick-current::before {
+    background-color: var(--color11);
+    content: '';
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    right: 0px;
+    height: 2px;
+    z-index: 10;
+}
+
+.timeline-carousel .timeline-post {
+    background: var(--white);
+    position: relative;
+    padding: 0px;
+    text-align: left;
+    min-height: 600px !important;
+    flex: 0 0 33%;
+    margin: 0px;
+}
+
+.timeline-carousel .slick-slide .timeline-post-inner-wrapper {
+    padding: 40px;
+}
+
+.timeline-carousel .timeline-post h3 {
+    color: var(--color2);
+    font-family: "AvertaStdPE";
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.timeline-carousel .slick-slide.slick-current h3 {
+    color: var(--white);
+}
+
+.timeline-carousel .timeline-line {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.timeline-carousel .timeline-line .bullet {
+    background-color: var(--color2);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 0px;
+    width: 12px;
+    height: 12px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.timeline-carousel .slick-slide.slick-current .timeline-line .bullet {
+    background-color: var(--color2);
+}
+
+.timeline-carousel .timeline-line .vertical-line {
+    background-color: var(--color11);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 2px;
+    height: 25px;
+    z-index: 2;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.timeline-carousel .slick-slide.slick-current .timeline-line .vertical-line {
+    background-color: var(--color11);
+}
+
+.timeline-carousel .timeline-line::after {
+    background-color: var(--color11);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100%;
+    height: 2px;
+}
+
+.timeline-carousel .slick-slide.slick-current .timeline-line::after {
+    background-color: var(--color11);
+}
+
+.timeline-carousel .timeline-content {
+    color: var(--main);
+    font-family: "AvertaStdPE";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.timeline-carousel .slick-slide {
+    opacity: 1 !important;
+    margin: 0px;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+}
+
+.timeline-carousel .slick-slide.slick-current {
+    background-color: var(--black);
+}
+
+.timeline-carousel .slick-slide.slick-current .timeline-content {
+    color: var(--white);
+}
+
+.timeline-carousel .slick-prev,
+.timeline-carousel .slick-next {
+    font-size: 24px;
+    color: var(--main);
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.timeline-carousel .slick-prev {
+    left: 90%;
+    top: 0;
+}
+
+.timeline-carousel .slick-next {
+    right: 6%;
+    top: 0px;
+}
